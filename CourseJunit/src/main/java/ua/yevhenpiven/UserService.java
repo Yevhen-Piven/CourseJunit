@@ -7,7 +7,8 @@ import lombok.extern.java.Log;
 @AllArgsConstructor
 public class UserService {
 private UserRepository userRepository;
-public User login(String userName) {
-	return UserRepository.getUserByUsername(userName);
+public User login(String userName) {log.info(String.format("%s - Finding user by userName: %s", getClass(), userName));
+return userRepository.getUserByUsername(userName);
+
 }
 }

@@ -2,12 +2,16 @@ package ua.yevhenpiven;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.Getter;
+
+import lombok.Setter;
+
 
 @Data
 @AllArgsConstructor
 public class User {
-private String userName;
-private String password;
+private  @Setter @Getter String userName;
+private @Getter @Setter String password;
 
 public String getUserName() {
 	return userName;
